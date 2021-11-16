@@ -1,0 +1,25 @@
+{
+  "name": "yandex-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --port 3000",
+    "build": "parcel build index.html"
+  },
+  "parcelCleanPaths": [
+    "dist",
+    ".cache"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.19.1",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "sass": "^1.43.4"
+  }
+}
