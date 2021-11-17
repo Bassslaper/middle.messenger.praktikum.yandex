@@ -1,5 +1,15 @@
+import './hello'
+import './helpers'
+import SigneInPage from './modules/SignIn/signIn.hbs'
+import template from './index.hbs'
 
-import {sum} from './modules/sum';
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.innerHTML = template({firstname: 'Alex', lastname: 'Gudini'})
 
-const root = document.querySelector('#root');
-root.textContent = sum(6, -1).toString();
+  const btn = document.getElementById('login')
+
+  btn.addEventListener('click', () => {
+    document.body.innerHTML = SigneInPage()    
+  })
+  
+})

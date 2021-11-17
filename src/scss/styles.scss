@@ -1,5 +1,6 @@
-$main-color: #007bff;
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'main';
 
-body {
-  background-color: $main-color;
-}
+@import 'blocks/signinup';
