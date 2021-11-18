@@ -60,6 +60,16 @@
   fill: $fill;
 }
 
+@mixin svgAsBgi($width, $height, $url) {
+  width: $width;
+  height: $height;
+  max-width: $width;
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url($url);
+}
+
 @mixin card {
   width: clamp(40rem, 50vw, 49.5rem);
   height: auto;

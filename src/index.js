@@ -1,14 +1,22 @@
-import './hello'
+import './hello/hello'
+import './modules/Chat/header/header'
 import './helpers'
+import './helpers/error/'
+import './helpers/chat/header/header'
 import SignInPage from './modules/SignIn/signIn.hbs'
 import SignUpPage from './modules/SignUp/signUp.hbs'
+import error from './modules/ErrorPages/error.hbs'
+import chat from './modules/Chat/Chat.hbs'
 import template from './index.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.innerHTML = template({firstname: 'Alex', lastname: 'Gudini'})
+  document.body.innerHTML = template({firstname: 'Reviewer'})
 
   const goToLoginBtn = document.getElementById('login')
   const goToSignUpBtn = document.getElementById('create-btn')
+  const goToError404 = document.getElementById('go-to-error404')
+  const goToError5xx = document.getElementById('go-to-error5xx')
+  const goToChat = document.getElementById('go-to-chat')
 
   goToLoginBtn.addEventListener('click', () => {
     document.body.innerHTML = SignInPage()
@@ -16,6 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   goToSignUpBtn.addEventListener('click', () => {
     document.body.innerHTML = SignUpPage()    
+  })
+
+  goToError404.addEventListener('click', () => {
+    document.body.innerHTML = error({code: '404'})    
+  })
+
+  goToError5xx.addEventListener('click', () => {
+    document.body.innerHTML = error({code: '500'})    
+  })
+
+  goToChat.addEventListener('click', () => {
+    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online'})    
   })
   
 })

@@ -1,0 +1,51 @@
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  h1 {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: 0.1em;
+    color: #F9294E;
+    margin: 0;
+    margin-bottom: 4.7rem;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.21em;
+    color: #294EF9;
+    margin: 0;
+    margin-bottom: 5.4rem;
+  }
+
+  span {
+    position: relative;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: -5.5rem;
+      transform: translate(0, -50%);
+      content: '';
+      width: 4rem;
+      height: 4.5rem;
+      background-position: 0 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('/src/assets/img/icons/drow_arrow.svg');
+    }
+  }
+
+}

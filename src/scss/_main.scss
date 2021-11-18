@@ -22,3 +22,27 @@ body {
   justify-content: center;
   height: 100%;
 }
+
+.buttons-box {
+  display: flex;
+  flex-direction: column;
+  width: clamp(300px, 50vw, 50rem);
+  margin: 0 auto;
+  margin-top: 10rem;
+
+  button {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    font-size: 18px;
+  }
+}
+
+.welcome-content {
+  text-align: center;
+  padding-top: 3rem;
+  width: 500px;
+  margin: 0 auto;
+  p {
+    font-size: 1.6rem;
+  }
+}
