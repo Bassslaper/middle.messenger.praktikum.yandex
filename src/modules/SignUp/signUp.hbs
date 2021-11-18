@@ -4,15 +4,54 @@
       <div class="card__logo"></div>
       <div class="card__title">Sign Up</div>
       <form class="card__form form" action="#" >
-        <div class="form__input-group input-group">
-          <label class="input-group__label" for="login">Login</label>
-          <input class="input-group__input" type="text" id="login" placeholder="Enter your login or e-mail">
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="email">Email</label>
+          <input class="input-group__input" type="email" id="email" placeholder="Enter your e-mail" required>
+          <span class="error-message">Email is incorected</span>
         </div>
       
-        <div class="form__input-group input-group">
-          <label class="input-group__label" for="password">Password</label>
-          <input class="input-group__input" type="password" id="password" placeholder="Enter your password">
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="name">Name</label>
+          <input class="input-group__input" type="text" id="name" placeholder="Enter your name" required>
+          <span class="error-message">Name is incorected</span>
         </div>
+
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="secondName">Second name</label>
+          <input class="input-group__input" type="text" id="secondName" placeholder="Enter your second name" required>
+          <span class="error-message">Second name is incorected</span>
+        </div>
+
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="secondName">Phone</label>
+          <input class="input-group__input" type="tel" id="secondName" placeholder="Enter your phone" required>
+          <span class="error-message">Phone is incorected</span>
+        </div>
+
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="phone">Phone</label>
+          <input class="input-group__input" type="tel" id="phone" placeholder="Enter your phone" required>
+          <span class="error-message">Login is incorected</span>
+        </div>
+
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="login">Login</label>
+          <input class="input-group__input" type="text" id="login" placeholder="Enter your login" required>
+          <span class="error-message">Login is incorected</span>
+        </div>
+
+        <div class="form__input-group input-group success">
+          <label class="input-group__label" for="password">Password</label>
+          <input class="input-group__input" type="password" id="password" placeholder="Enter your password" required>
+          <span class="error-message">Password is incorected</span>
+        </div>
+
+        <div class="form__input-group input-group error">
+          <label class="input-group__label" for="password">Confirm password</label>
+          <input class="input-group__input" type="password" id="password" placeholder="Confirm your password" required>
+          <span class="error-message">Password is incorected or mismatch</span>
+        </div>
+      
       
         <button class="form__submit-btn ripple" type="submit">Create you account</button>
       </form>

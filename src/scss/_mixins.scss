@@ -128,7 +128,7 @@
     }
 
     &__form {
-      margin-bottom: clamp(2rem, 3vw, 3.4rem);
+      margin-bottom: clamp(1.5rem, 2.5vw, 2.5rem);
     }
 
     &__link {
@@ -154,17 +154,19 @@
 
     &__input-group {
       width: 100%;
-      margin-bottom: clamp(2.7rem, 3vw, 3.4rem);
+      margin-bottom: clamp(1rem, 1.2vw, 1.8rem);
+
     }
 
     &__submit-btn {
-      margin-top: clamp(1.5rem, 2.2vw, 2.5rem);
+      
       font-weight: 500;
       font-size: 1.8rem;
       text-align: center;
       letter-spacing: 0.15em;
       @include custom-base-btn(100%);
       @include  custom-color-btn (#007BFF, rgba(0, 0, 0, 0.25));
+      margin-top: clamp(2rem, 2.5vw, 3rem);
     }
 
     .input-group {
@@ -180,6 +182,30 @@
 
       &__input {
         @include form-input;
+      }
+
+      .error-message {
+        margin: 0 auto;
+        margin-top: 0.5rem;
+        color: #DC3545;
+        font-weight: 500;
+        display: none;
+      }
+
+      &.success {
+        .input-group__input {
+          border-color: #28A745;
+        }
+      }
+
+      &.error {
+        .input-group__input {
+          border-color: #DC3545;
+        }
+
+        .error-message {
+          display: block;
+        }
       }
     }
 

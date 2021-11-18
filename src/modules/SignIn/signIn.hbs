@@ -4,14 +4,16 @@
       <div class="card__logo"></div>
       <div class="card__title">Sign In</div>
       <form class="card__form form" action="#" >
-        <div class="form__input-group input-group">
+        <div class="form__input-group input-group error">
           <label class="input-group__label" for="login">Login</label>
-          <input class="input-group__input" type="text" id="login" placeholder="Enter your login or e-mail">
+          <input class="input-group__input" type="text" id="login" placeholder="Enter your login or e-mail" required>
+          <span class="error-message">Login is incorected</span>
         </div>
       
-        <div class="form__input-group input-group">
+        <div class="form__input-group input-group success">
           <label class="input-group__label" for="password">Password</label>
-          <input class="input-group__input" type="password" id="password" placeholder="Enter your password">
+          <input class="input-group__input" type="password" id="password" placeholder="Enter your password" required>
+          <span class="error-message">Password is incorected</span>
         </div>
       
         <button class="form__submit-btn ripple" type="submit">Sign In</button>

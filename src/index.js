@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.innerHTML = template({firstname: 'Alex', lastname: 'Gudini'})
 
   const goToLoginBtn = document.getElementById('login')
-  // const goToSignUpBtn = document.getElementById('create-account-btn')
+  const goToSignUpBtn = document.getElementById('create-btn')
 
   goToLoginBtn.addEventListener('click', () => {
-    document.body.innerHTML = SignInPage()    
+    document.body.innerHTML = SignInPage()
   })
 
-  // goToSignUpBtn.addEventListener('click', () => {
-  //   document.body.innerHTML = SignUpPage()    
-  // })
+  goToSignUpBtn.addEventListener('click', () => {
+    document.body.innerHTML = SignUpPage()    
+  })
   
 })
