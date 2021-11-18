@@ -1,6 +1,8 @@
 @import 'normalize';
+@import 'fonts';
 @import 'variables';
 @import 'mixins';
 @import 'main';
 
-@import 'blocks/signinup';
+@import 'blocks/signin';
+@import 'blocks/signup';

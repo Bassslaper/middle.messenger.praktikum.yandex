@@ -1,15 +1,21 @@
 import './hello'
 import './helpers'
-import SigneInPage from './modules/SignIn/signIn.hbs'
+import SignInPage from './modules/SignIn/signIn.hbs'
+import SignUpPage from './modules/SignUp/signUp.hbs'
 import template from './index.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.innerHTML = template({firstname: 'Alex', lastname: 'Gudini'})
 
-  const btn = document.getElementById('login')
+  const goToLoginBtn = document.getElementById('login')
+  // const goToSignUpBtn = document.getElementById('create-account-btn')
 
-  btn.addEventListener('click', () => {
-    document.body.innerHTML = SigneInPage()    
+  goToLoginBtn.addEventListener('click', () => {
+    document.body.innerHTML = SignInPage()    
   })
+
+  // goToSignUpBtn.addEventListener('click', () => {
+  //   document.body.innerHTML = SignUpPage()    
+  // })
   
 })

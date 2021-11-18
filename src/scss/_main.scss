@@ -11,4 +11,14 @@ body {
   height: 100%;
   max-height: 100vh;
   min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+
+.card-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
