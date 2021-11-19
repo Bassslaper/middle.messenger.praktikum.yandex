@@ -2,3 +2,109 @@
   background: #FAF9F9;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  &__header {
+    padding: 1rem 0.8rem 1rem 1.6rem;
+    border: 1px solid rgba(44, 44, 44, 0.05);
+    flex-grow: 0;
+  }
+
+  &__input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    .profile-open {
+      @include svgAsBgi(2.5rem, 2.5rem, '/src/assets/img/icons/profile-icon.svg');
+      margin-right: 6px;
+      flex-grow: 0;
+    }
+
+    .search-input {
+      flex-grow: 1;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 15px;
+      color: rgba(0, 0, 0, 1);
+      border: none;
+      background: rgba(44, 44, 44, 0.11);
+      border-radius: 3px;
+      padding: 0.6rem 1.5rem;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__content {
+    padding: 1rem 1.6rem 2rem 1rem;
+    flex-grow: 1;
+  }
+
+  .sidebar-content {
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    &__avatar {
+      width: 4rem;
+      height: 4rem;
+      min-width: 4rem;
+      border-radius: 50%;
+      background: #C4C4C4;
+      margin-right: 1.2em;
+
+      img {
+        @include objectFitImg(4rem);
+      }
+    }
+
+    &__preview {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .chat-name {
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(44, 44, 44, 1);
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .text-preview {
+        font-size: 10px;
+        line-height: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        
+        .username {
+          white-space: nowrap;
+          margin-right: 5px;
+          font-weight: 500;
+          color: $main-yellow;
+        }
+
+        .text {
+          margin: 0;
+          white-space: nowrap;
+          // max-width: 170px;
+          // text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
