@@ -1,5 +1,6 @@
 import './hello/hello'
 import './modules/Chat/header/header'
+import './modules/Chat/footer/footer'
 import './helpers'
 import './helpers/error/'
 import './helpers/chat/header/header'

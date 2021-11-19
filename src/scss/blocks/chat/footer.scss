@@ -1,0 +1,44 @@
+.footer {
+  padding: 9px 15px 9px 12px;
+  background-color: #fff;
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .clip-icon {
+      flex-grow: 0;
+      margin-right: 12px;
+      @include svgAsBgi(2rem, 2rem, '/src/assets/img/icons/Paperclip.svg')
+    }
+
+    .send-input {
+      flex-grow: 1;
+      background: #FFFFFF;
+      border-radius: 6px;
+      color: #000;
+      padding: 8px 26px 8px 10px;
+      border: 1px solid rgba(0, 0, 0, 0.13);
+      font-size: 1.6rem;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .send__icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translate(0, -50%);
+      @include svgAsBgi(2.2rem, 2.2rem, '/src/assets/img/icons/send-icon.svg')
+    }
+  }
+}
