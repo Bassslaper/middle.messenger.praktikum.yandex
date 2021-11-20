@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'main';
+@import 'blocks/modals/modalStyle.scss';
 
 @import 'blocks/chat/chat';
 @import 'blocks/chat/sidebar';
@@ -12,5 +13,6 @@
 @import 'blocks/signin';
 @import 'blocks/signup';
 @import 'blocks/errorPage';
-@import 'blocks/modals/sidebarModal.scss'
+@import 'blocks/modals/sidebarModal.scss';
+@import 'blocks/modals/headerModal.scss'
 

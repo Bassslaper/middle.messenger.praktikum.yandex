@@ -1,0 +1,25 @@
+.header-modal-overlay {
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  .header-modal {
+    top: 7.1rem;
+    right: 2.3rem;
+
+    &__item {
+      .icon {
+        &.delete {
+          @include svgAsBgi(2.4rem, 2.4rem, '/src/assets/img/icons/delete-icon.svg')
+        }
+
+        &.edit {
+          @include svgAsBgi(2.4rem, 2.4rem, '/src/assets/img/icons/edit-con.svg')
+        }
+      }
+    }
+  }
+}
+

@@ -1,4 +1,5 @@
 import './components/modals/sidebarModal/sidebarModal'
+import './components/modals/headerModal/headerModal'
 
 import './hello/hello'
 import './modules/Chat/header/header'
@@ -9,7 +10,7 @@ import './helpers'
 import './helpers/error/'
 import './helpers/chat/header/header'
 
-import { toggleModal } from './lib/sidebar/sidebarModalUtils'
+import { toggleModal } from './lib/sidebar/modalUtils'
 
 import SignInPage from './modules/SignIn/signIn.hbs'
 import SignUpPage from './modules/SignUp/signUp.hbs'
@@ -51,14 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   goToChat.addEventListener('click', () => {
     document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', chatInfo: chatInfo}) 
+    const openModalBtn = document.querySelector('.profile-open')
+    const modal = document.querySelector('.sidebar-modal-overlay')
 
-    toggleModal()
-
-
-  
-   
+    const headerSettingsBtn = document.querySelector('.chat-header__settings')
+    const headermodal = document.querySelector('.header-modal-overlay')
+    
+    toggleModal(headerSettingsBtn, headermodal, '.header-modal') 
   })
 
-
-  
 })
