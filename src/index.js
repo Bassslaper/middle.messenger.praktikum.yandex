@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const goToError5xx = document.getElementById('go-to-error5xx')
   const goToChat = document.getElementById('go-to-chat')
 
-
-
   const chatInfo = [
     {chatName: 'Yandex Practicum', userName: 'Аня Краева', userText: 'А почуму бы и нет'},
     {chatName: 'Инвестиции', userName: 'Набибулина', userText: 'Скупайте крипту'},
@@ -46,7 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   goToChat.addEventListener('click', () => {
-    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', test: chatInfo})    
+    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', test: chatInfo}) 
+    const sidebar = document.getElementById('sidebar')
+    console.log('sidebar: ', sidebar);     
   })
   
 })
