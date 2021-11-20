@@ -5,7 +5,6 @@ import './modules/Chat/sidebar/sidebar'
 import './helpers'
 import './helpers/error/'
 import './helpers/chat/header/header'
-import './helpers/chat/sidebar/sidebar'
 import SignInPage from './modules/SignIn/signIn.hbs'
 import SignUpPage from './modules/SignUp/signUp.hbs'
 import error from './modules/ErrorPages/error.hbs'
@@ -20,6 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const goToError404 = document.getElementById('go-to-error404')
   const goToError5xx = document.getElementById('go-to-error5xx')
   const goToChat = document.getElementById('go-to-chat')
+
+
+
+  const chatInfo = [
+    {chatName: 'Yandex Practicum', userName: 'Аня Краева', userText: 'А почуму бы и нет'},
+    {chatName: 'Инвестиции', userName: 'Набибулина', userText: 'Скупайте крипту'},
+    {chatName: 'Кулинария', userName: 'Василий Емильянов', userText: 'Как приготовить дошик'}
+  ]
+
 
   goToLoginBtn.addEventListener('click', () => {
     document.body.innerHTML = SignInPage()
@@ -38,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   goToChat.addEventListener('click', () => {
-    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online'})    
+    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', test: chatInfo})    
   })
   
 })
