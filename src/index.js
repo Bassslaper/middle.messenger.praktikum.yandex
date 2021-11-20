@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerSettingsBtn = document.querySelector('.chat-header__settings')
     const headermodal = document.querySelector('.header-modal-overlay')
-    
+
+    toggleModal(openModalBtn, modal, '.sidebar-modal') 
     toggleModal(headerSettingsBtn, headermodal, '.header-modal') 
   })
 
