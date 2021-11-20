@@ -1,10 +1,16 @@
+import './components/modals/sidebarModal/sidebarModal'
+
 import './hello/hello'
 import './modules/Chat/header/header'
 import './modules/Chat/footer/footer'
 import './modules/Chat/sidebar/sidebar'
+
 import './helpers'
 import './helpers/error/'
 import './helpers/chat/header/header'
+
+import { toggleModal } from './lib/sidebar/sidebarModalUtils'
+
 import SignInPage from './modules/SignIn/signIn.hbs'
 import SignUpPage from './modules/SignUp/signUp.hbs'
 import error from './modules/ErrorPages/error.hbs'
@@ -44,9 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   goToChat.addEventListener('click', () => {
-    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', test: chatInfo}) 
-    const sidebar = document.getElementById('sidebar')
-    console.log('sidebar: ', sidebar);     
+    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', chatInfo: chatInfo}) 
+
+    toggleModal()
+
+
+  
+   
   })
+
+
   
 })
