@@ -1,5 +1,6 @@
 import './components/modals/sidebarModal/sidebarModal'
 import './components/modals/headerModal/headerModal'
+import './components/modals/footerModal/footerModal'
 
 import './hello/hello'
 import './modules/Chat/header/header'
@@ -56,10 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.sidebar-modal-overlay')
 
     const headerSettingsBtn = document.querySelector('.chat-header__settings')
-    const headermodal = document.querySelector('.header-modal-overlay')
+    const headerModal = document.querySelector('.header-modal-overlay')
+
+    const clipBtn = document.querySelector('.clip-icon')
+    const footerModal = document.querySelector('.footer-modal-overlay')
 
     toggleModal(openModalBtn, modal, '.sidebar-modal') 
-    toggleModal(headerSettingsBtn, headermodal, '.header-modal') 
+    toggleModal(headerSettingsBtn, headerModal, '.header-modal')
+    toggleModal(clipBtn, footerModal, '.footer-modal') 
   })
 
 })
