@@ -1,5 +1,10 @@
 .modal-overlay {
   @include modal-overlay-empty;
+  display: none;
+
+  &.open {
+    display: block;
+  }
 
   .modal-content {
     @include modal-content;

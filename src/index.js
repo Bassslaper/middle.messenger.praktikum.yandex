@@ -1,6 +1,7 @@
 import './components/modals/sidebarModal/sidebarModal'
 import './components/modals/headerModal/headerModal'
 import './components/modals/footerModal/footerModal'
+import './components/modals/headerModal/confirmDelModal'
 
 import './hello/hello'
 import './modules/Chat/header/header'
@@ -62,9 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const clipBtn = document.querySelector('.clip-icon')
     const footerModal = document.querySelector('.footer-modal-overlay')
 
+    const delChatBtn = document.getElementById('delete-chat')
+    const confirmDelModal = document.querySelector('.confirm-del-modal-overlay')
+
     toggleModal(openModalBtn, modal, '.sidebar-modal') 
     toggleModal(headerSettingsBtn, headerModal, '.header-modal')
-    toggleModal(clipBtn, footerModal, '.footer-modal') 
+    toggleModal(clipBtn, footerModal, '.footer-modal')
+    toggleModal(delChatBtn, confirmDelModal, '.confirm-del-modal')
   })
 
 })
