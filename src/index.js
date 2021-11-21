@@ -1,7 +1,12 @@
+import './lib/constDom'
+
+import './components/modals/sidebarModal/editProfileModal'
 import './components/modals/sidebarModal/sidebarModal'
+
 import './components/modals/headerModal/headerModal'
 import './components/modals/footerModal/footerModal'
 import './components/modals/headerModal/confirmDelModal'
+
 
 import './hello/hello'
 import './modules/Chat/header/header'
@@ -53,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   goToChat.addEventListener('click', () => {
-    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', chatInfo: chatInfo}) 
+    document.body.innerHTML = chat({title: 'Yandex Practicum', status: 'online', chatInfo: chatInfo})
+
     const openModalBtn = document.querySelector('.profile-open')
     const modal = document.querySelector('.sidebar-modal-overlay')
 
@@ -66,10 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const delChatBtn = document.getElementById('delete-chat')
     const confirmDelModal = document.querySelector('.confirm-del-modal-overlay')
 
+    
+    // const editProfileBtn = document.getElementById('edit-profile')
+    // const editProfilelModal = document.querySelector('.edit-profile-modal-overlay')
+
     toggleModal(openModalBtn, modal, '.sidebar-modal') 
     toggleModal(headerSettingsBtn, headerModal, '.header-modal')
     toggleModal(clipBtn, footerModal, '.footer-modal')
     toggleModal(delChatBtn, confirmDelModal, '.confirm-del-modal')
+    // toggleModal(editProfileBtn, editProfilelModal, '.edit-profile-modal')
   })
 
 })
