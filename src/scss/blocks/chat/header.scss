@@ -34,7 +34,7 @@
     }
 
     &__settings {
-      @include svgAsBgi(2.4rem, 2.4rem, '/src/assets/img/icons/settings-icon.svg');
+      @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/settings-icon.svg');
     }
   }
 }

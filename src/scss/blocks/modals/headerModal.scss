@@ -12,11 +12,11 @@
     &__item {
       .icon {
         &.delete {
-          @include svgAsBgi(2.4rem, 2.4rem, '/src/assets/img/icons/delete-icon.svg')
+          @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/delete-icon.svg')
         }
 
         &.edit {
-          @include svgAsBgi(2.4rem, 2.4rem, '/src/assets/img/icons/edit-con.svg')
+          @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/edit-con.svg')
         }
       }
     }

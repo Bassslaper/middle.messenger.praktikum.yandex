@@ -12,7 +12,7 @@
     .clip-icon {
       flex-grow: 0;
       margin-right: 12px;
-      @include svgAsBgi(2rem, 2rem, '/src/assets/img/icons/Paperclip.svg')
+      @include svgAsBgi(2rem, 2rem, '../../src/assets/img/icons/Paperclip.svg')
     }
 
     .send-input {
@@ -38,7 +38,7 @@
       top: 50%;
       right: 8px;
       transform: translate(0, -50%);
-      @include svgAsBgi(2.2rem, 2.2rem, '/src/assets/img/icons/send-icon.svg')
+      @include svgAsBgi(2.2rem, 2.2rem, '../../src/assets/img/icons/send-icon.svg')
     }
   }
 }

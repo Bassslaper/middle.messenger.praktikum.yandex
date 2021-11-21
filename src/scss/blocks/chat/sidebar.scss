@@ -21,7 +21,7 @@
     
     
     .profile-open {
-      @include svgAsBgi(2.5rem, 2.5rem, '/src/assets/img/icons/profile-icon.svg');
+      @include svgAsBgi(2.5rem, 2.5rem, '../../src/assets/img/icons/profile-icon.svg');
       margin-right: 6px;
       flex-grow: 0;
     }
