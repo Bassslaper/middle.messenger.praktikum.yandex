@@ -12,7 +12,7 @@
     &__item {
       .icon {
         &.photo {
-          @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/photo-icon.svg')
+          // @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/photo-icon.svg')
         }
 
         &.file {
