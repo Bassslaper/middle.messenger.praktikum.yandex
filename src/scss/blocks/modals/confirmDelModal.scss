@@ -1,0 +1,59 @@
+.confirm-del-modal-overlay {
+  .confirm-del-modal {
+    top: 30%;
+    left: 60%;
+    padding-top: 3rem;
+    padding-bottom: 4.7rem;
+    transform: translate(-50%, -50%);
+
+    &__container {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin: 0 auto;
+
+      .emoji {
+        font-size: 3.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .text {
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 2.1rem;
+      }
+
+      .buttons-block {
+        display: flex;
+        justify-content: space-between;
+
+        &__btn {
+          color: #fff;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          text-align: center;
+          letter-spacing: 0.15em;
+          padding: 8px;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 6px;
+
+          &_acsept {
+            background-color: #528881;
+            margin-right: 2.5rem;
+            min-width: 9.5rem;
+          }
+
+          &_cancel {
+            background-color: #885159;
+          }
+        }
+      }
+    }
+  }
+}

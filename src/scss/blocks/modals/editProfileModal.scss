@@ -1,0 +1,40 @@
+.edit-profile-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  .edit-profile-modal {
+    .profile-modal__header {
+      .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 10rem;
+        min-width: 10rem;
+        background-color: #528881;
+        border-radius: 50%;
+        margin-bottom: 8px;
+  
+        &__icon {
+          @include svgAsBgi(4rem, 4rem, '../../src/assets/img/icons/no-photo.svg')
+        }
+      }
+    }
+
+    .modal-form {
+      &__inputs {
+        .left-block {
+          &__icon {
+            &_man {
+              @include svgAsBgi(3.2rem, 3.2rem, '../../src/assets/img/icons/man-icon.svg')
+            }
+            &_dog {
+              @include svgAsBgi(3.2rem, 3.2rem, '../../src/assets/img/icons/dog-icon-form.svg')
+            }
+            &_phone-book {
+              @include svgAsBgi(3.2rem, 3.2rem, '../../src/assets/img/icons/phone-book.svg')
+            }
+          }
+        }
+      }
+    }
+  }
+}
