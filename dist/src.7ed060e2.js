@@ -2132,7 +2132,7 @@ THE SOFTWARE.
 });
 
 ;
-},{}],"../src/components/modals/sidebarModal/sidebarModal.hbs":[function(require,module,exports) {
+},{}],"../src/components/modals/sidebarModal/editProfileModal.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2147,8 +2147,96 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var templateFunction = _handlebars.default.template({
   "compiler": [8, ">= 4.3.0"],
   "main": function main(container, depth0, helpers, partials, data) {
-    return "<div class=\"sidebar-modal-overlay\">\n  <div class=\"sidebar-modal\">\n    <header class=\"sidebar-modal__header\">\n      <div class=\"sidebar-modal__header-block\">\n        <span class=\"sidebar-modal__avatar\">\n        </span>\n        <div class=\"sidebar-modal__user-shortinfo user-shortinfo\">\n          <span class=\"user-shortinfo__item user-name\">Ilon Mask</span>\n          <span class=\"user-shortinfo__item user-phone\">+7(999)-889-11-11</span>\n          <span class=\"user-shortinfo__item user-nickname\">@Iamgodofspace</span>\n        </div>\n      </div>\n    </header>\n    <main class=\"sidebar-modal__content\">\n      <div class=\"info-table\">\n        <div class=\"info-table__row\">\n          <span class=\"title\">Surname</span>\n          <span class=\"description\">Mask</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Name</span>\n          <span class=\"description\">Ilon</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Login</span>\n          <span class=\"description\">Iamgodofspace</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Chat name</span>\n          <span class=\"description\">Ilon</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">E-mail</span>\n          <span class=\"description\">ilon@mask</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Phone</span>\n          <span class=\"description\">+7(999)-899-11-11</span>\n        </div> \n      </div>\n  \n      <div class=\"action-buttons\">\n         <div class=\"action-buttons__row\">\n          <button class=\"edit-btn edit-profile-btn\">Edit profile</button>\n        </div>\n         <div class=\"action-buttons__row\">\n          <button class=\"edit-btn edit-password-btn\">Edit password</button>\n        </div>\n        <div class=\"action-buttons__row\">\n          <button class=\"edit-btn logout-btn\">Logout</button>\n        </div>\n      </div>\n    </main>\n  </div>\n</div>";
+    return "<div class=\"edit-profile-modal-overlay modal-overlay\">\n  <div class=\"edit-profile-modal modal-content profile-modal\">\n    <header class=\"profile-modal__header\">\n      <div class=\"top\">\n        <span class=\"close\"></span>\n      </div>\n      <div class=\"bottom\">\n        <span class=\"avatar\">\n          <span class=\"avatar__icon\"></span>\n        </span>\n\n        <button class=\"change-button profile-modal-button\">Set profile photo</button>\n      </div>\n    </header>\n    <main class=\"profile-modal__content\">\n      <form class=\"profile-modal__form modal-form\" action=\"#\" method=\"POST\">\n        <div class=\"modal-form__inputs\">\n          <div class=\"left-block\">\n            <span class=\"left-block__icon left-block__icon_man\"></span>\n          </div>\n          <div class=\"right-block\">\n            <div class=\"input-group\">\n              <input id=\"edit-surname\" type=\"text\" placeholder=\"Enter your surname\" value=\"Mask\">\n              <label for=\"edit-surname\">Surname</label>\n            </div>\n\n            <div class=\"input-group\">\n              <input id=\"edit-name\" type=\"text\" placeholder=\"Enter your name\" value=\"Ilon\">\n              <label for=\"edit-name\">Name</label>\n            </div>\n          </div>\n        </div>\n\n          <div class=\"modal-form__inputs\">\n          <div class=\"left-block\">\n            <span class=\"left-block__icon left-block__icon_dog\"></span>\n          </div>\n          <div class=\"right-block\">\n            <div class=\"input-group\">\n              <input id=\"edit-surname\" type=\"text\" placeholder=\"Enter your surname\" value=\"Iamgodofspace\">\n              <label for=\"edit-surname\">Login</label>\n            </div>\n\n            <div class=\"input-group\">\n              <input id=\"edit-name\" type=\"text\" placeholder=\"Enter your name\" value=\"Ilon\">\n              <label for=\"edit-name\">Chat name</label>\n            </div>\n          </div>\n        </div>\n\n          <div class=\"modal-form__inputs\">\n          <div class=\"left-block\">\n            <span class=\"left-block__icon left-block__icon_phone-book\"></span>\n          </div>\n          <div class=\"right-block\">\n            <div class=\"input-group\">\n              <input id=\"edit-surname\" type=\"text\" placeholder=\"Enter your e-mail\" value=\"ilon@mask\">\n              <label for=\"edit-surname\">E-mail</label>\n            </div>\n\n            <div class=\"input-group\">\n              <input id=\"edit-name\" type=\"text\" placeholder=\"Enter your phone\" value=\"+7(999)899-11-11\">\n              <label for=\"edit-name\">Phone</label>\n            </div>\n          </div>\n        </div>\n        <button class=\"modal-form__button profile-modal-button\">Save changes</button>\n      </form>\n    </main>\n    \n  </div>\n</div>";
   },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"../src/components/modals/sidebarModal/editProfileModal.js":[function(require,module,exports) {
+"use strict";
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+var _editProfileModal = _interopRequireDefault(require("./editProfileModal.hbs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_handlebars.default.registerPartial('editProfileModal', _editProfileModal.default);
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js","./editProfileModal.hbs":"../src/components/modals/sidebarModal/editProfileModal.hbs"}],"../src/components/modals/sidebarModal/editPasswordModal.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var templateFunction = _handlebars.default.template({
+  "compiler": [8, ">= 4.3.0"],
+  "main": function main(container, depth0, helpers, partials, data) {
+    return "<div class=\"edit-password-modal-overlay modal-overlay\">\n  <div class=\"edit-password-modal modal-content profile-modal\">\n    <header class=\"profile-modal__header\">\n      <div class=\"top\">\n        <span class=\"close\"></span>\n      </div>\n      <div class=\"bottom\">\n          <span class=\"bottom__text\">Change your Password</span>\n        </span>\n\n      </div>\n    </header>\n    <main class=\"profile-modal__content\">\n      <form class=\"profile-modal__form modal-form\" action=\"#\" method=\"POST\">\n        <div class=\"modal-form__inputs\">\n          <div class=\"left-block\">\n            <span class=\"left-block__icon left-block__icon_key\"></span>\n          </div>\n          <div class=\"right-block\">\n            <div class=\"input-group\">\n              <input id=\"edit-surname\" type=\"password\" placeholder=\"Enter your old password\" value=\"password\">\n              <label for=\"edit-surname\">Old password</label>\n            </div>\n\n            <div class=\"input-group\">\n              <input id=\"edit-name\" type=\"password\" placeholder=\"Enter your new password\" value=\"new_password\">\n              <label for=\"edit-name\">New password</label>\n            </div>\n\n            <div class=\"input-group\">\n              <input id=\"edit-name\" type=\"password\" placeholder=\"Enter your new password\" value=\"new_password\">\n              <label for=\"edit-name\">Repeat new password</label>\n            </div>\n          </div>\n        </div>\n        <button class=\"modal-form__button profile-modal-button\">Save changes</button>\n      </form>\n    </main>\n    \n  </div>\n</div>";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"../src/components/modals/sidebarModal/editPasswordModal.js":[function(require,module,exports) {
+"use strict";
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+var _editPasswordModal = _interopRequireDefault(require("./editPasswordModal.hbs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_handlebars.default.registerPartial('editPasswordModal', _editPasswordModal.default);
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js","./editPasswordModal.hbs":"../src/components/modals/sidebarModal/editPasswordModal.hbs"}],"../src/components/modals/sidebarModal/sidebarModal.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var templateFunction = _handlebars.default.template({
+  "compiler": [8, ">= 4.3.0"],
+  "main": function main(container, depth0, helpers, partials, data) {
+    var stack1,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return "<div class=\"sidebar-modal-overlay\">\n  <div class=\"sidebar-modal\">\n    <header class=\"sidebar-modal__header\">\n      <div class=\"sidebar-modal__header-block\">\n        <span class=\"sidebar-modal__avatar\">\n        </span>\n        <div class=\"sidebar-modal__user-shortinfo user-shortinfo\">\n          <span class=\"user-shortinfo__item user-name\">Ilon Mask</span>\n          <span class=\"user-shortinfo__item user-phone\">+7(999)-889-11-11</span>\n          <span class=\"user-shortinfo__item user-nickname\">@Iamgodofspace</span>\n        </div>\n      </div>\n    </header>\n    <main class=\"sidebar-modal__content\">\n      <div class=\"info-table\">\n        <div class=\"info-table__row\">\n          <span class=\"title\">Surname</span>\n          <span class=\"description\">Mask</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Name</span>\n          <span class=\"description\">Ilon</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Login</span>\n          <span class=\"description\">Iamgodofspace</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Chat name</span>\n          <span class=\"description\">Ilon</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">E-mail</span>\n          <span class=\"description\">ilon@mask</span>\n        </div>\n        <div class=\"info-table__row\">\n          <span class=\"title\">Phone</span>\n          <span class=\"description\">+7(999)-899-11-11</span>\n        </div> \n      </div>\n  \n      <div class=\"action-buttons\">\n         <div class=\"action-buttons__row\">\n          <button id=\"edit-profile\" class=\"edit-btn edit-profile-btn\">Edit profile</button>\n        </div>\n         <div class=\"action-buttons__row\">\n          <button id=\"edit-password\" class=\"edit-btn edit-password-btn\">Edit password</button>\n        </div>\n        <div class=\"action-buttons__row\">\n          <button class=\"edit-btn logout-btn\">Logout</button>\n        </div>\n      </div>\n    </main>\n" + ((stack1 = container.invokePartial(lookupProperty(partials, "editProfileModal"), depth0, {
+      "name": "editProfileModal",
+      "data": data,
+      "indent": "    ",
+      "helpers": helpers,
+      "partials": partials,
+      "decorators": container.decorators
+    })) != null ? stack1 : "") + ((stack1 = container.invokePartial(lookupProperty(partials, "editPasswordModal"), depth0, {
+      "name": "editPasswordModal",
+      "data": data,
+      "indent": "     ",
+      "helpers": helpers,
+      "partials": partials,
+      "decorators": container.decorators
+    })) != null ? stack1 : "") + "  </div>\n</div>";
+  },
+  "usePartial": true,
   "useData": true
 });
 
@@ -2179,7 +2267,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var templateFunction = _handlebars.default.template({
   "compiler": [8, ">= 4.3.0"],
   "main": function main(container, depth0, helpers, partials, data) {
-    return "<div class=\"header-modal-overlay modal-overlay\">\n  <div class=\"header-modal modal-content\">\n    <div class=\"header-modal__item modal-content__item\">\n      <span class=\"icon delete\"></span>\n      <span class=\"text\">Delete chat</span>\n    </div>\n    <div class=\"header-modal__item modal-content__item\">\n      <span class=\"icon edit\"></span>\n      <span class=\"text\">Edit chat</span>\n    </div>\n  </div>\n</div>";
+    return "<div class=\"header-modal-overlay modal-overlay\">\n  <div class=\"header-modal modal-content\">\n    <div id=\"delete-chat\" class=\"header-modal__item modal-content__item\">\n      <span class=\"icon delete\"></span>\n      <span class=\"text\">Delete chat</span>\n    </div>\n    <div class=\"header-modal__item modal-content__item\">\n      <span class=\"icon edit\"></span>\n      <span class=\"text\">Edit chat</span>\n    </div>\n  </div>\n</div>";
   },
   "useData": true
 });
@@ -2228,7 +2316,39 @@ var _footerModal = _interopRequireDefault(require("./footerModal.hbs"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _handlebars.default.registerPartial('footerModal', _footerModal.default);
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js","./footerModal.hbs":"../src/components/modals/footerModal/footerModal.hbs"}],"../src/hello/hello.hbs":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js","./footerModal.hbs":"../src/components/modals/footerModal/footerModal.hbs"}],"../src/components/modals/headerModal/confirmDelModal.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var templateFunction = _handlebars.default.template({
+  "compiler": [8, ">= 4.3.0"],
+  "main": function main(container, depth0, helpers, partials, data) {
+    return "<div class=\"confirm-del-modal-overlay modal-overlay\">\n  <div class=\"confirm-del-modal modal-content\">\n    <div class=\"confirm-del-modal__container\">\n      <span class=\"emoji\">&#128562;</span>\n      <p class=\"text\">Are you sure <br> want to delete the user?</p>\n      <div class=\"buttons-block\">\n        <button class=\"buttons-block__btn buttons-block__btn_acsept\">Yes, shure</button>\n        <button class=\"buttons-block__btn buttons-block__btn_cancel\">Oh, I accidentally pressed</button>\n      </div>\n    </div>\n    \n  </div>\n</div>";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"../src/components/modals/headerModal/confirmDelModal.js":[function(require,module,exports) {
+"use strict";
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+var _confirmDelModal = _interopRequireDefault(require("./confirmDelModal.hbs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_handlebars.default.registerPartial('confirmDelModal', _confirmDelModal.default);
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js","./confirmDelModal.hbs":"../src/components/modals/headerModal/confirmDelModal.hbs"}],"../src/hello/hello.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2324,6 +2444,13 @@ var templateFunction = _handlebars.default.template({
       "name": "headerModal",
       "data": data,
       "indent": "  ",
+      "helpers": helpers,
+      "partials": partials,
+      "decorators": container.decorators
+    })) != null ? stack1 : "") + ((stack1 = container.invokePartial(lookupProperty(partials, "confirmDelModal"), depth0, {
+      "name": "confirmDelModal",
+      "data": data,
+      "indent": "   ",
       "helpers": helpers,
       "partials": partials,
       "decorators": container.decorators
@@ -2567,6 +2694,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.toggleModal = void 0;
 
 var toggleModal = function toggleModal(trigger, overlay, modalClass) {
+  var modal = document.querySelector(modalClass);
+  console.log('modal: ', modal);
+  modal.addEventListener('click', function (e) {
+    if (e.target.classList.contains('close')) {
+      overlay.classList.remove('open');
+    }
+  });
   trigger.addEventListener('click', function () {
     overlay.classList.add('open');
   });
@@ -2764,11 +2898,17 @@ exports.default = _default;
 },{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
+require("./components/modals/sidebarModal/editProfileModal");
+
+require("./components/modals/sidebarModal/editPasswordModal");
+
 require("./components/modals/sidebarModal/sidebarModal");
 
 require("./components/modals/headerModal/headerModal");
 
 require("./components/modals/footerModal/footerModal");
+
+require("./components/modals/headerModal/confirmDelModal");
 
 require("./hello/hello");
 
@@ -2848,12 +2988,21 @@ document.addEventListener('DOMContentLoaded', function () {
     var headerModal = document.querySelector('.header-modal-overlay');
     var clipBtn = document.querySelector('.clip-icon');
     var footerModal = document.querySelector('.footer-modal-overlay');
+    var delChatBtn = document.getElementById('delete-chat');
+    var confirmDelModal = document.querySelector('.confirm-del-modal-overlay');
+    var editProfileBtn = document.getElementById('edit-profile');
+    var editProfileModal = document.querySelector('.edit-profile-modal-overlay');
+    var editPasswordBtn = document.getElementById('edit-password');
+    var editPasswordModal = document.querySelector('.edit-password-modal-overlay');
     (0, _modalUtils.toggleModal)(openModalBtn, modal, '.sidebar-modal');
     (0, _modalUtils.toggleModal)(headerSettingsBtn, headerModal, '.header-modal');
     (0, _modalUtils.toggleModal)(clipBtn, footerModal, '.footer-modal');
+    (0, _modalUtils.toggleModal)(delChatBtn, confirmDelModal, '.confirm-del-modal');
+    (0, _modalUtils.toggleModal)(editProfileBtn, editProfileModal, '.edit-profile-modal');
+    (0, _modalUtils.toggleModal)(editPasswordBtn, editPasswordModal, '.edit-password-modal');
   });
 });
-},{"./components/modals/sidebarModal/sidebarModal":"../src/components/modals/sidebarModal/sidebarModal.js","./components/modals/headerModal/headerModal":"../src/components/modals/headerModal/headerModal.js","./components/modals/footerModal/footerModal":"../src/components/modals/footerModal/footerModal.js","./hello/hello":"../src/hello/hello.js","./modules/Chat/header/header":"../src/modules/Chat/header/header.js","./modules/Chat/footer/footer":"../src/modules/Chat/footer/footer.js","./modules/Chat/sidebar/sidebar":"../src/modules/Chat/sidebar/sidebar.js","./helpers":"../src/helpers/index.js","./helpers/error/":"../src/helpers/error/index.js","./helpers/chat/header/header":"../src/helpers/chat/header/header.js","./lib/sidebar/modalUtils":"../src/lib/sidebar/modalUtils.js","./modules/SignIn/signIn.hbs":"../src/modules/SignIn/signIn.hbs","./modules/SignUp/signUp.hbs":"../src/modules/SignUp/signUp.hbs","./modules/ErrorPages/error.hbs":"../src/modules/ErrorPages/error.hbs","./modules/Chat/Chat.hbs":"../src/modules/Chat/Chat.hbs","./index.hbs":"../src/index.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/modals/sidebarModal/editProfileModal":"../src/components/modals/sidebarModal/editProfileModal.js","./components/modals/sidebarModal/editPasswordModal":"../src/components/modals/sidebarModal/editPasswordModal.js","./components/modals/sidebarModal/sidebarModal":"../src/components/modals/sidebarModal/sidebarModal.js","./components/modals/headerModal/headerModal":"../src/components/modals/headerModal/headerModal.js","./components/modals/footerModal/footerModal":"../src/components/modals/footerModal/footerModal.js","./components/modals/headerModal/confirmDelModal":"../src/components/modals/headerModal/confirmDelModal.js","./hello/hello":"../src/hello/hello.js","./modules/Chat/header/header":"../src/modules/Chat/header/header.js","./modules/Chat/footer/footer":"../src/modules/Chat/footer/footer.js","./modules/Chat/sidebar/sidebar":"../src/modules/Chat/sidebar/sidebar.js","./helpers":"../src/helpers/index.js","./helpers/error/":"../src/helpers/error/index.js","./helpers/chat/header/header":"../src/helpers/chat/header/header.js","./lib/sidebar/modalUtils":"../src/lib/sidebar/modalUtils.js","./modules/SignIn/signIn.hbs":"../src/modules/SignIn/signIn.hbs","./modules/SignUp/signUp.hbs":"../src/modules/SignUp/signUp.hbs","./modules/ErrorPages/error.hbs":"../src/modules/ErrorPages/error.hbs","./modules/Chat/Chat.hbs":"../src/modules/Chat/Chat.hbs","./index.hbs":"../src/index.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2881,7 +3030,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53868" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61046" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
