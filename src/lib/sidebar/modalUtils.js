@@ -1,7 +1,6 @@
 
 const toggleModal = (trigger, overlay, modalClass) => {
   const modal = document.querySelector(modalClass)
-  console.log('modal: ', modal);
 
   modal.addEventListener('click', (e) => {
     if(e.target.classList.contains('close') ) {
