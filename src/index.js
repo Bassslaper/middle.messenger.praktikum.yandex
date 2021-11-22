@@ -1,5 +1,5 @@
 import './components/modals/sidebarModal/editProfileModal'
-import './components/modals/sidebarModal/test'
+import './components/modals/sidebarModal/editPasswordModal'
 import './components/modals/sidebarModal/sidebarModal'
 
 import './components/modals/headerModal/headerModal'
@@ -73,13 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const editProfileBtn = document.getElementById('edit-profile')
-    const editProfilelModal = document.querySelector('.edit-profile-modal-overlay')
+    const editProfileModal = document.querySelector('.edit-profile-modal-overlay')
+
+    const editPasswordBtn = document.getElementById('edit-password')
+    const editPasswordModal = document.querySelector('.edit-password-modal-overlay')
 
     toggleModal(openModalBtn, modal, '.sidebar-modal') 
     toggleModal(headerSettingsBtn, headerModal, '.header-modal')
     toggleModal(clipBtn, footerModal, '.footer-modal')
     toggleModal(delChatBtn, confirmDelModal, '.confirm-del-modal')
-    toggleModal(editProfileBtn, editProfilelModal, '.edit-profile-modal')
+    toggleModal(editProfileBtn, editProfileModal, '.edit-profile-modal')
+    toggleModal(editPasswordBtn, editPasswordModal, '.edit-password-modal')
   })
 
 })
