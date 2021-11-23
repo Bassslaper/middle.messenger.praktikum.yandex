@@ -17,6 +17,13 @@
           @include svgAsBgi(4rem, 4rem, '../../src/assets/img/icons/no-photo.svg')
         }
       }
+
+      .upload-button-group {
+        position: relative;
+        input[type="file"] {
+          display: none;
+        }
+      }
     }
 
     .modal-form {

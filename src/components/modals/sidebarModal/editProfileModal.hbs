@@ -2,14 +2,17 @@
   <div class="edit-profile-modal modal-content profile-modal">
     <header class="profile-modal__header">
       <div class="top">
-        <span class="close"></span>
+        <button class="close" type="button"></button>
       </div>
       <div class="bottom">
         <span class="avatar">
           <span class="avatar__icon"></span>
         </span>
 
-        <button class="change-button profile-modal-button">Set profile photo</button>
+        <div class="upload-button-group">
+          <input type="file" id="upload-avatar">
+          <label class="profile-modal-button" for="upload-avatar" >Set profile photo</label>
+        </div>
       </div>
     </header>
     <main class="profile-modal__content">
@@ -64,7 +67,7 @@
             </div>
           </div>
         </div>
-        <button class="modal-form__button profile-modal-button">Save changes</button>
+        <button class="modal-form__button profile-modal-button" type="submit">Save changes</button>
       </form>
     </main>
     
