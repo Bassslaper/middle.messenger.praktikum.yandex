@@ -29,7 +29,7 @@
 
   &__header {
     padding: clamp(3rem, 3.5vw, 3.5rem) clamp(1.5rem, 2vw, 2rem);
-    background-color: rgba(44, 44, 44, 0.8);
+    background-color: $main-brown;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,24 +132,24 @@
           font-weight: 500;
 
           &.edit-profile-btn {
-            color: #007bff;
+            color: $main-color;
 
             &:hover {
-              color: ligten(#007bff, 10%);
+              color: ligten($main-color, 10%);
             }
           }
 
           &.edit-password-btn {
-            color: #17A2B8;
+            color: $edit-password;
             &:hover {
-              color: ligten(#17A2B8, 10%);
+              color: ligten($edit-password, 10%);
             }
           }
 
           &.logout-btn {
-            color: #DC3545;
+            color: $logout-btn;
             &:hover {
-              color: ligten(#DC3545, 10%);
+              color: ligten($logout-btn, 10%);
             }
           }
         }

@@ -1,7 +1,7 @@
 #sidebar {
   position: relative;
-  background: #FAF9F9;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+  background-color:$sidebar-bg;
+  box-shadow: 0px 0px 1px $section-shadow;
 }
 
 .sidebar {
@@ -9,7 +9,7 @@
   flex-direction: column;
   &__header {
     padding: 1rem 0.8rem 1rem 1.6rem;
-    border: 1px solid rgba(44, 44, 44, 0.05);
+    border: 1px solid $sidebar-header-border;
     flex-grow: 0;
   }
 
@@ -31,13 +31,12 @@
       font-weight: 300;
       font-size: 12px;
       line-height: 15px;
-      color: rgba(0, 0, 0, 1);
       border: none;
-      background: rgba(44, 44, 44, 0.11);
+      background-color: $sidebar-search-bg;
       border-radius: 3px;
       padding: 0.6rem 1.5rem;
       &::placeholder {
-        color: rgba(0, 0, 0, 0.5);
+        color: $input-placeholder;
       }
 
       &:focus {
@@ -64,7 +63,7 @@
       height: 4rem;
       min-width: 4rem;
       border-radius: 50%;
-      background: #C4C4C4;
+      background-color: $sidebar-chat-avatar;
       margin-right: 1.2em;
 
       img {
@@ -80,7 +79,7 @@
       .chat-name {
         font-size: 14px;
         line-height: 17px;
-        color: rgba(44, 44, 44, 1);
+        color: $sidebar-chat-name;
         font-weight: bold;
         margin-bottom: 6px;
       }
@@ -88,7 +87,7 @@
       .text-preview {
         font-size: 10px;
         line-height: 12px;
-        color: rgba(0, 0, 0, 0.5);
+        color: $sidebar-text-preview;
         display: flex;
         align-items: center;
         
@@ -102,8 +101,6 @@
         .text {
           margin: 0;
           white-space: nowrap;
-          // max-width: 170px;
-          // text-overflow: ellipsis;
         }
       }
     }

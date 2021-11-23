@@ -1,8 +1,8 @@
 #chat {
   display: flex;
   height: 100%;
-  background: radial-gradient(77.22% 100.7% at 22.78% 49.96%, rgba(255, 240, 105, 0.43) 1.01%, rgba(212, 242, 155, 0.72) 20.31%, rgba(130, 245, 252, 0.68) 100%);
   overflow: hidden;
+  @include chatGradientBg($from-bg-color, $to-bg-color, $nextTo-bg-color);
 
   #sidebar {
     width: 20%;

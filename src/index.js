@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerSettingsBtn = document.querySelector('.chat-header__settings')
     const headerModal = document.querySelector('.header-modal-overlay')
 
-    const clipBtn = document.querySelector('.clip-icon')
+    const clipBtn = document.querySelector('.footer__open-modal-btn')
     const footerModal = document.querySelector('.footer-modal-overlay')
 
     const delChatBtn = document.getElementById('delete-chat')

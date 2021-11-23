@@ -44,13 +44,13 @@
           border-radius: 6px;
 
           &_acsept {
-            background-color: #528881;
+            background-color: $modal-cofirm-acsept;
             margin-right: 2.5rem;
             min-width: 9.5rem;
           }
 
           &_cancel {
-            background-color: #885159;
+            background-color: $modal-cofirm-cancel;
           }
         }
       }

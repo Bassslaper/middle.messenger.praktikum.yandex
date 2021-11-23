@@ -1,3 +1,7 @@
+@mixin chatGradientBg($from, $to, $nextTo) {
+  background: radial-gradient(77.22% 100.7% at 22.78% 49.96%, $from 1.01%, $to 20.31%, $nextTo 100%);
+}
+
 @mixin custom-base-btn($width) {
   display: block;
   width: $width;

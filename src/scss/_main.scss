@@ -42,11 +42,11 @@ button {
     margin-bottom: 1rem;
     padding: 2rem;
     font-size: 18px;
-    background-color: #007bff;
+    background-color: $main-color;
     border-radius: 6px;
     color: #fff;
     &:hover {
-      background-color: lighten(#007bff, 5%);
+      background-color: lighten($main-color, 5%);
     }
   }
 }
