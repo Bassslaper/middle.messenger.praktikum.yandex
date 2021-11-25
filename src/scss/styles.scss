@@ -1,0 +1,22 @@
+@import 'normalize';
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'main';
+@import 'blocks/modals/modalStyle.scss';
+
+@import 'blocks/chat/chat';
+@import 'blocks/chat/sidebar';
+@import 'blocks/chat/main';
+@import 'blocks/chat/header';
+@import 'blocks/chat/footer';
+@import 'blocks/signin';
+@import 'blocks/signup';
+@import 'blocks/errorPage';
+@import 'blocks/modals/sidebarModal.scss';
+@import 'blocks/modals/editProfileModal.scss';
+@import 'blocks/modals/editPasswordModal.scss';
+@import 'blocks/modals/headerModal.scss';
+@import 'blocks/modals/confirmDelModal.scss';
+@import 'blocks/modals/footerModal.scss';
+

@@ -1,0 +1,250 @@
+@mixin chatGradientBg($from, $to, $nextTo) {
+  background: radial-gradient(77.22% 100.7% at 22.78% 49.96%, $from 1.01%, $to 20.31%, $nextTo 100%);
+}
+
+@mixin custom-base-btn($width) {
+  display: block;
+  width: $width;
+  border-radius: 6px;
+  outline: none;
+  border:none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 1.8rem 0;
+  margin: 0 auto;
+  transition: all 0.3s;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &.ripple {
+    background-position: center;
+    transition: all 0.8s;
+  }
+  
+  &.ripple:active {
+    background-size: 100%;
+    transition: all 0.3s;
+  }
+}
+
+@mixin custom-color-btn ($bg-color, $shadow){
+  background-color: $bg-color;
+  border: 1px solid $bg-color;
+  box-shadow: 0px 3px 4px $shadow;
+  
+  &.ripple:hover {
+    background: $bg-color radial-gradient(circle, transparent 5%, $bg-color 5%) center/15000%;
+  }
+  
+  &.ripple:active {
+    background-color: lighten($bg-color, 5%);
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+@mixin objectFitImg($size) {
+  width: $size;
+  height: $size;
+  min-width: $size;
+  object-position: center top;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@mixin svgStyle($size, $fill) {
+  width: $size;
+  height: $size;
+  fill: $fill;
+}
+
+@mixin svgAsBgi($width, $height, $url) {
+  display: block;
+  width: $width;
+  height: $height;
+  max-width: $width;
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url($url);
+}
+
+@mixin card {
+  width: clamp(40rem, 50vw, 49.5rem);
+  height: auto;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  margin-right: 2rem;
+  margin-left: 2rem;
+  padding: 3rem clamp(1.5rem, 2vw, 2.5rem);
+}
+
+@mixin circle-image-wrap ($size) {
+  width: $size;
+  height: $size;
+  min-width: $size;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+@mixin form-input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #007BFF;
+  border-radius: 6px;
+  padding: clamp(1rem, 1.5vw, 1.5rem) clamp(1.2rem, 1.5vw, 1.7rem);
+
+  &:is(&:active, &:focus) {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17
+  }
+}
+
+@mixin login-register-card {
+  .card {
+    @include card;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__logo {
+      @include circle-image-wrap(7.4rem);
+
+      margin-top: 4.7rem;
+      margin-bottom: 3.5rem;
+
+      img {
+        @include objectFitImg(7.4rem)
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+      color: #000;
+      margin-bottom: 1.6rem;
+      font-weight: bold;
+    }
+
+    &__form {
+      margin-bottom: clamp(1.5rem, 2.5vw, 2.5rem);
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #3988FF;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      &:active {
+        outline: none;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .form {
+    width: 100%;
+
+    &__input-group {
+      width: 100%;
+      margin-bottom: clamp(1rem, 1.2vw, 1.8rem);
+
+    }
+
+    &__submit-btn {
+      
+      font-weight: 500;
+      font-size: 1.8rem;
+      text-align: center;
+      letter-spacing: 0.15em;
+      @include custom-base-btn(100%);
+      @include  custom-color-btn (#007BFF, rgba(0, 0, 0, 0.25));
+      margin-top: clamp(2rem, 2.5vw, 3rem);
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      &__label {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 8px;
+      }
+
+      &__input {
+        @include form-input;
+      }
+
+      .error-message {
+        margin: 0 auto;
+        margin-top: 0.5rem;
+        color: #DC3545;
+        font-weight: 500;
+        display: none;
+      }
+
+      &.success {
+        .input-group__input {
+          border-color: #28A745;
+        }
+      }
+
+      &.error {
+        .input-group__input {
+          border-color: #DC3545;
+        }
+
+        .error-message {
+          display: block;
+        }
+      }
+    }
+
+
+  }
+}
+
+@mixin modal-overlay-empty {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, 0);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+@mixin modal-content {
+  position: absolute;
+  padding: 1.5rem 0;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  background-color: #fff;
+}

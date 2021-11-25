@@ -1,0 +1,42 @@
+.footer {
+  padding: 9px 15px 9px 12px;
+  background-color: $footer-bg;
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .footer__open-modal-btn {
+      flex-grow: 0;
+      margin-right: 12px;
+      @include svgAsBgi(2rem, 2rem, '../../src/assets/img/icons/Paperclip.svg')
+    }
+
+    .footer__send-input {
+      flex-grow: 1;
+      border-radius: 6px;
+      padding: 8px 26px 8px 10px;
+      border: 1px solid $footer-input-border;
+      font-size: 1.6rem;
+      &::placeholder {
+        color: $input-placeholder;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .footer__send-btn {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translate(0, -50%);
+      @include svgAsBgi(2.2rem, 2.2rem, '../../src/assets/img/icons/send-icon.svg')
+    }
+  }
+}

@@ -1,0 +1,15 @@
+#chat {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  @include chatGradientBg($from-bg-color, $to-bg-color, $nextTo-bg-color);
+
+  #sidebar {
+    width: 20%;
+    flex-grow: 0;
+  }
+
+  #main {
+    flex-grow: 1;
+  }
+}

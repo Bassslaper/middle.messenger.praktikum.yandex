@@ -1,0 +1,6 @@
+#sign-up {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  height: unset;
+  @include login-register-card 
+}

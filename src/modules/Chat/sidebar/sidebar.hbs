@@ -1,0 +1,25 @@
+<aside id="sidebar" class="sidebar">
+  <header class="sidebar__header">
+    <div class="sidebar__input-group">
+      <button class="profile-open" type="button"></button>
+      <input class="search-input" type="text" placeholder="Search">
+    </div>
+  </header>
+
+  <main class="sidebar__content sidebar-content">
+    {{#each chatInfo}}
+    <div class="sidebar-content__item">
+      <span class="sidebar-content__avatar">
+      </span>
+      <div class="sidebar-content__preview">
+        <span class="chat-name">{{chatName}}</span>
+        <div class="text-preview">
+          <span class="username">{{userName}}:</span>
+          <p class="text">{{userText}}</p>  
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </main>
+  {{>sidebarModal}}
+</aside>

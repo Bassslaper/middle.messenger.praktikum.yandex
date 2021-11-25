@@ -1,0 +1,23 @@
+.footer-modal-overlay {
+
+  .footer-modal {
+    bottom: 6.9rem;
+    left: calc(20% + 1.5rem);
+
+    &__item {
+      .icon {
+        &.photo {
+          @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/Photo-icon.svg')
+        }
+
+        &.file {
+          @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/add-file.svg')
+        }
+
+        &.location {
+          @include svgAsBgi(2.4rem, 2.4rem, '../../src/assets/img/icons/add-location.svg')
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<div class="sidebar-modal-overlay">
+  <div class="sidebar-modal">
+    <header class="sidebar-modal__header">
+      <div class="sidebar-modal__header-block">
+        <span class="sidebar-modal__avatar">
+          {{!-- <img src="#" alt="avatar"> --}}
+        </span>
+        <div class="sidebar-modal__user-shortinfo user-shortinfo">
+          <span class="user-shortinfo__item user-name">Ilon Mask</span>
+          <span class="user-shortinfo__item user-phone">+7(999)-889-11-11</span>
+          <span class="user-shortinfo__item user-nickname">@Iamgodofspace</span>
+        </div>
+      </div>
+    </header>
+    <main class="sidebar-modal__content">
+      <dl class="info-table">
+        <div class="info-table__row">
+          <dt class="title">Surname</dt>
+          <dd class="description">Mask</dd>
+        </div>
+        <div class="info-table__row">
+          <dt class="title">Name</dt>
+          <dd class="description">Ilon</dd>
+        </div>
+        <div class="info-table__row">
+          <dt class="title">Login</dt>
+          <dd class="description">Iamgodofspace</dd>
+        </div>
+        <div class="info-table__row">
+          <dt class="title">Chat name</dt>
+          <dd class="description">Ilon</dd>
+        </div>
+        <div class="info-table__row">
+          <dt class="title">E-mail</dt>
+          <dd class="description">ilon@mask</dd>
+        </div>
+        <div class="info-table__row">
+          <dt class="title">Phone</dt>
+          <dd class="description">+7(999)-899-11-11</dd>
+        </div> 
+      </dl>
+  
+      <div class="action-buttons">
+         <div class="action-buttons__row">
+          <button id="edit-profile" class="edit-btn edit-profile-btn" type="button">Edit profile</button>
+        </div>
+         <div class="action-buttons__row">
+          <button id="edit-password" class="edit-btn edit-password-btn" type="button">Edit password</button>
+        </div>
+        <div class="action-buttons__row">
+          <button class="edit-btn logout-btn" type="button">Logout</button>
+        </div>
+      </div>
+    </main>
+    {{> editProfileModal }}
+     {{> editPasswordModal }}
+  </div>
+</div>
