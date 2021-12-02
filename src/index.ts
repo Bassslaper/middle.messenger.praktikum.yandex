@@ -13,7 +13,7 @@ import './modules/Chat/footer/footer'
 import './modules/Chat/sidebar/sidebar'
 
 import './helpers'
-import './helpers/error/'
+import './helpers/error'
 import './helpers/chat/header/header'
 
 import { toggleModal } from './lib/sidebar/modalUtils'
